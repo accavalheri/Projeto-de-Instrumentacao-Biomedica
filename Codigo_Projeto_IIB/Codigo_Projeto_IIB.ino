@@ -212,7 +212,7 @@ void loop(){
 
  
   // Verificar se é hora de revelar o compartimento 2
-  if (horaAtual >= hora2 && minutoAtual >= minuto2 && (horaAtual*60+minutoAtual)<(hora3*60+minuto3) && compartimento2vazio!=1) { //vai entrar nesse if até o paciente tomar o remédio (ou até dar a hora do próximo compartimento)
+  if ((horaAtual*60 + minutoAtual) >= (hora2*60 + minuto2) && (horaAtual*60+minutoAtual)<(hora3*60+minuto3) && compartimento2vazio!=1) { //vai entrar nesse if até o paciente tomar o remédio (ou até dar a hora do próximo compartimento)
      
     if (horaAtual==hora2 && minutoAtual==minuto2 && segundoAtual==0){ //revela o compartimento na hora certa (uma única vez)
         digitalWrite(led2, HIGH); //o led só acende no horário específico do compartimento
@@ -236,7 +236,7 @@ void loop(){
 
 
   // Verificar se é hora de revelar o compartimento 3
-  if (horaAtual >= hora3 && minutoAtual >= minuto3 && (horaAtual*60+minutoAtual)<(hora4*60+minuto4) && compartimento3vazio!=1) {
+  if ((horaAtual*60 + minutoAtual) >= (hora3*60 + minuto3) && (horaAtual*60+minutoAtual)<(hora4*60+minuto4) && compartimento3vazio!=1) {
      
     if (horaAtual==hora3 && minutoAtual==minuto3 && segundoAtual==0){
         digitalWrite(led3, HIGH);
@@ -260,7 +260,7 @@ void loop(){
 
  
   // Verificar se é hora de revelar o compartimento 4
-  if (horaAtual >= hora4 && minutoAtual >= minuto4 && compartimento4vazio!=1) {
+  if ((horaAtual*60 + minutoAtual) >= (hora4*60 + minuto4) && compartimento4vazio!=1) {
      
     if (horaAtual==hora4 && minutoAtual==minuto4 && segundoAtual==0){
         digitalWrite(led4, HIGH);
