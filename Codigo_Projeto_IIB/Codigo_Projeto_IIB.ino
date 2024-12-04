@@ -86,6 +86,8 @@ void piscarledaviso() {
     for(i=0;i<4;i++){
       digitalWrite(ledaviso, HIGH);
       delay(500);
+      digitalWrite(ledaviso, LOW);
+      delay(500);
     }
 
 }
