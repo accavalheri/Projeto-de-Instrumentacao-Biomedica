@@ -301,7 +301,7 @@ void loop(){
   ////// Caso o usuário tente programar algum horário como 00:00h //////
 
   if(hora2==0 || hora3==0 || hora4==0){
-      Serial.println("O programa só aceita horários a partir de 01:00h Evite horários próximos de 00:00h, pois os compartimentos ficarão abertos por pouco tempo.");
+      Serial.println("O programa só aceita horários a partir de 00:01h Evite horários próximos de 00:00h, pois os compartimentos ficarão abertos por pouco tempo.");
       delay(5000);
       }
       
